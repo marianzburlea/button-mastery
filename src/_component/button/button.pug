@@ -1,69 +1,51 @@
+-
+  var buttonSize = ['tiny', 'small', 'normal', 'big', 'large']
+  var iconSizeMap = {
+    tiny: 20,
+    small: 20,
+    normal: 20,
+    big: 20,
+    large: 24
+  }
+  
 .button__wrapper
-  button.button.button__tiny tiny CTA
-  button.button.button__small small CTA
-  button.button.button__normal normal CTA
-  button.button.button__big big CTA
-  button.button.button__large large CTA
+  each size in buttonSize
+    button.button(
+      class=`button__${size}`
+    ) #{size} CTA!
+  //- aici nu se repeta
+
+  each size in buttonSize
+    button.button.button__lead--left(
+      class=`button__${size}`
+    )
+      span #{size} CTA
+      img(src=`${baseUrl}asset/image/circle.svg` width="20")
 
 
-  button.button.button__lead--left.button__tiny
-    span tiny CTA
-    img(src=`${baseUrl}asset/image/circle.svg` width="20")
-  button.button.button__lead--left.button__small
-    span small CTA
-    img(src=`${baseUrl}asset/image/circle.svg` width="20")
-  button.button.button__lead--left.button__normal
-    span Super duper super Text
-    img(src=`${baseUrl}asset/image/circle.svg` width="20")
-  button.button.button__lead--left.button__big
-    span big CTA
-    img(src=`${baseUrl}asset/image/circle.svg` width="20")
-  button.button.button__lead--left.button__large
-    span large CTA
-    img(src=`${baseUrl}asset/image/circle.svg` width="24")
+  each size in buttonSize
+    button.button.button__lead--right(
+      class=`button__${size}`
+    )
+      span #{size} CTA
+      img(src=`${baseUrl}asset/image/circle.svg` width="20")
 
 
-  button.button.button__lead--right.button__tiny
-    span tiny CTA
-    img(src=`${baseUrl}asset/image/circle.svg` width="20")
-  button.button.button__lead--right.button__small
-    span small CTA
-    img(src=`${baseUrl}asset/image/circle.svg` width="20")
-  button.button.button__lead--right.button__normal
-    span normal CTA
-    img(src=`${baseUrl}asset/image/circle.svg` width="20")
-  button.button.button__lead--right.button__big
-    span big CTA
-    img(src=`${baseUrl}asset/image/circle.svg` width="20")
-  button.button.button__lead--right.button__large
-    span large CTA
-    img(src=`${baseUrl}asset/image/circle.svg` width="24")
+  each size in buttonSize
+    button.button.button__lead--left(
+      class=`button__${size}`
+    )
+      span tiny CTA
+      .white-disc
 
 
-  button.button.button__lead--right.button__tiny
-    span tiny CTA
-    .white-disc
-  button.button.button__lead--right.button__small
-    span small CTA
-    .white-disc
-  button.button.button__lead--right.button__normal
-    span normal CTA
-    .white-disc
-  button.button.button__lead--right.button__big
-    span big CTA
-    .white-disc
-  button.button.button__lead--right.button__large
-    span large CTA
-    .white-disc
+  each size in buttonSize
+    button.button(
+      icon="circle"
+      class=`button__${size}`
+    )
+      img(
+        src=`${baseUrl}asset/image/circle.svg`
+        width=`${iconSizeMap[size]}`
+      )
 
-
-  button(icon="circle").button.button__tiny
-    img(src=`${baseUrl}asset/image/circle.svg` width="20")
-  button(icon="circle").button.button__small
-    img(src=`${baseUrl}asset/image/circle.svg` width="20")
-  button(icon="circle").button.button__normal
-    img(src=`${baseUrl}asset/image/circle.svg` width="20")
-  button(icon="circle").button.button__big
-    img(src=`${baseUrl}asset/image/circle.svg` width="20")
-  button(icon="circle").button.button__large
-    img(src=`${baseUrl}asset/image/circle.svg` width="24")

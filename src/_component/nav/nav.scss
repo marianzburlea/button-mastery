@@ -1,0 +1,9 @@
+.nav {
+  display: flex;
+  gap: 4px;
+
+  &__link {
+    text-decoration: none;
+    border-bottom: 1px solid green;
+  }
+}

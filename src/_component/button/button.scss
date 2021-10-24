@@ -1,6 +1,4 @@
 @import "button.config";
-
-// style the button
 .button {
   background-color: $backgroudColor;
   border-radius: $borderRadius;
@@ -22,12 +20,12 @@
   &__lead {
     &--left {
       /* Generate .button__lead--left */
-      flex-direction: row;
+      flex-direction: row-reverse;
     }
 
     &--right {
       /* Generate .button__lead--right */
-      flex-direction: row-reverse;
+      flex-direction: row;
     }
   }
 
@@ -38,57 +36,18 @@
     align-items: center;
   }
 
-  &__tiny {
-    height: $buttonBaseHeight + 4px * 0;
-    line-height: $buttonBaseHeight + 4px * 0;
+  @for $i from 0 to length($buttonSizeList) {
+    &__#{nth($buttonSizeList, ($i + 1))} {
+      height: $buttonBaseHeight + 4px * ($i + 1);
+      line-height: $buttonBaseHeight + 4px * ($i + 1);
 
-    &:not([icon]) {
-      padding: 0 $buttonBasePadding + 2px * 0;
-    }
+      &:not([icon]) {
+        padding: 0 $buttonBasePadding + 2px * ($i + 1);
+      }
 
-    &[icon] {
-      width: $buttonBaseHeight + 4px * 0;
-    }
-  }
-
-  &__small {
-    height: $buttonBaseHeight + 4px * 1;
-    line-height: $buttonBaseHeight + 4px * 1;
-    padding: 0 $buttonBasePadding + 2px * 1;
-
-    &[icon] {
-      width: $buttonBaseHeight + 4px * 1;
-    }
-  }
-
-  &__normal {
-    height: $buttonBaseHeight + 4px * 2;
-    line-height: $buttonBaseHeight + 4px * 2;
-    padding: 0 $buttonBasePadding + 2px * 2;
-
-    &[icon] {
-      width: $buttonBaseHeight + 4px * 2;
-    }
-  }
-
-  &__big {
-    height: $buttonBaseHeight + 4px * 3;
-    line-height: $buttonBaseHeight + 4px * 3;
-    padding: 0 $buttonBasePadding + 2px * 3;
-
-    &[icon] {
-      width: $buttonBaseHeight + 4px * 3;
-    }
-  }
-
-  &__large {
-    height: $buttonBaseHeight + 4px * 6;
-    line-height: $buttonBaseHeight + 4px * 6;
-    padding: 0 $buttonBasePadding + 2px * 7;
-    gap: 12px;
-
-    &[icon] {
-      width: $buttonBaseHeight + 4px * 6;
+      &[icon] {
+        width: $buttonBaseHeight + 4px * ($i + 1);
+      }
     }
   }
 }
