@@ -42,7 +42,7 @@
     },
     "render": {
       "sourceFileChange": false,
-      "allPugFiles": false,
+      "allPugFiles": true,
       "url": {
         "//": "this is recommended to avoid Linux/Windows capitalization issue",
         "htmlExtensionOn": false,
@@ -52,7 +52,7 @@
     "entry": {
       "cssExternal": "style**.{scss,sass}",
       "cssEmbed": "embed**.{scss,sass}",
-      "cssModular": false,
+      "cssModular": true,
       "css": {
         "embed": false,
         "external": true
