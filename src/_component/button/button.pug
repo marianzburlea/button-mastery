@@ -7,13 +7,20 @@
     big: 20,
     large: 24
   }
-  
+
 .button__wrapper
   each size in buttonSize
     button.button(
       class=`button__${size}`
     ) #{size} CTA!
   //- aici nu se repeta
+
+  each size in buttonSize
+    button.button.button__lead--left(
+      class=`button__${size}`
+    )
+      span #{size} CTA
+      img(src=`${baseUrl}asset/image/circle.svg` width="20")
 
   each size in buttonSize
     button.button.button__lead--left(

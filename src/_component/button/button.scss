@@ -5,7 +5,6 @@
   border-width: $borderWidth;
   color: $buttonTextColor;
   display: flex;
-  gap: 8px;
   align-items: center;
   justify-self: start;
   white-space: nowrap;
@@ -38,15 +37,16 @@
 
   @for $i from 0 to length($buttonSizeList) {
     &__#{nth($buttonSizeList, ($i + 1))} {
-      height: $buttonBaseHeight + 4px * ($i + 1);
-      line-height: $buttonBaseHeight + 4px * ($i + 1);
+      height: nth($buttonWidthList, $i + 1);
+      line-height: nth($buttonWidthList, $i + 1);
+      gap: nth($buttonGapList, $i + 1);
 
       &:not([icon]) {
-        padding: 0 $buttonBasePadding + 2px * ($i + 1);
+        padding: 0 nth($buttonPaddingList, $i + 1);
       }
 
       &[icon] {
-        width: $buttonBaseHeight + 4px * ($i + 1);
+        width: nth($buttonWidthList, $i + 1);
       }
     }
   }
