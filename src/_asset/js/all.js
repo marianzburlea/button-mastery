@@ -1,3 +1,1 @@
-document
-  .querySelector('.title__name--last')
-  .textContent = 'Mega Developer uuu! :) :)';
+console.log('Yeeey, this is JavaScript from Pug Starter')

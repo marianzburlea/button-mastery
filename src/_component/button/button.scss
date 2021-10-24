@@ -1,0 +1,112 @@
+@import "button.config";
+
+// style the button
+.button {
+  background-color: $backgroudColor;
+  border-radius: $borderRadius;
+  border-width: $borderWidth;
+  color: $buttonTextColor;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-self: start;
+  white-space: nowrap;
+
+  &__wrapper {
+    /* surpriza */
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(5, auto);
+  }
+
+  &__lead {
+    &--left {
+      /* Generate .button__lead--left */
+      flex-direction: row;
+    }
+
+    &--right {
+      /* Generate .button__lead--right */
+      flex-direction: row-reverse;
+    }
+  }
+
+  &[icon] {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__tiny {
+    height: $buttonBaseHeight + 4px * 0;
+    line-height: $buttonBaseHeight + 4px * 0;
+
+    &:not([icon]) {
+      padding: 0 $buttonBasePadding + 2px * 0;
+    }
+
+    &[icon] {
+      width: $buttonBaseHeight + 4px * 0;
+    }
+  }
+
+  &__small {
+    height: $buttonBaseHeight + 4px * 1;
+    line-height: $buttonBaseHeight + 4px * 1;
+    padding: 0 $buttonBasePadding + 2px * 1;
+
+    &[icon] {
+      width: $buttonBaseHeight + 4px * 1;
+    }
+  }
+
+  &__normal {
+    height: $buttonBaseHeight + 4px * 2;
+    line-height: $buttonBaseHeight + 4px * 2;
+    padding: 0 $buttonBasePadding + 2px * 2;
+
+    &[icon] {
+      width: $buttonBaseHeight + 4px * 2;
+    }
+  }
+
+  &__big {
+    height: $buttonBaseHeight + 4px * 3;
+    line-height: $buttonBaseHeight + 4px * 3;
+    padding: 0 $buttonBasePadding + 2px * 3;
+
+    &[icon] {
+      width: $buttonBaseHeight + 4px * 3;
+    }
+  }
+
+  &__large {
+    height: $buttonBaseHeight + 4px * 6;
+    line-height: $buttonBaseHeight + 4px * 6;
+    padding: 0 $buttonBasePadding + 2px * 7;
+    gap: 12px;
+
+    &[icon] {
+      width: $buttonBaseHeight + 4px * 6;
+    }
+  }
+}
+
+.white-disc {
+  width: 10px;
+  height: 10px;
+
+  position: relative;
+
+  &::after {
+    content: "";
+    border-radius: 50%;
+    background-color: $buttonTextColor;
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    left: 1px;
+    right: 1px;
+  }
+}
