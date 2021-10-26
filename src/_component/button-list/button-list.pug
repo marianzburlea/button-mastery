@@ -1,0 +1,60 @@
+h1 This is the mega uga buga button mastery
+-
+  var buttonSize = ['tiny', 'small', 'normal', 'big', 'large']
+  var iconSizeMap = {
+    tiny: 20,
+    small: 20,
+    normal: 20,
+    big: 20,
+    large: 24
+  }
+
+.button__wrapper
+  each size in buttonSize
+    button.button(
+      class=`button__${size}`
+    ) #{size} CTA!
+
+  //- disabled
+  each size in buttonSize
+    button.button(
+      class=`button__${size}`
+      disabled
+    ) #{size} CTA!
+
+
+
+  each size in buttonSize
+    button.button.button__lead--left(
+      class=`button__${size}`
+    )
+      span #{size} CTA
+      img(src=`${baseUrl}asset/image/circle.svg` width="20")
+
+
+  each size in buttonSize
+    button.button.button__lead--right(
+      class=`button__${size}`
+    )
+      span #{size} CTA
+      img(src=`${baseUrl}asset/image/circle.svg` width="20")
+
+
+  each size in buttonSize
+    button.button.button__lead--left(
+      class=`button__${size}`
+    )
+      span tiny CTA
+      .white-disc
+
+
+  each size in buttonSize
+    button.button(
+      icon="circle"
+      class=`button__${size}`
+    )
+      img(
+        src=`${baseUrl}asset/image/circle.svg`
+        width=`${iconSizeMap[size]}`
+      )
+

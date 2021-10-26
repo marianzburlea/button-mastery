@@ -1,0 +1,24 @@
+@import "button.config";
+
+.button {
+  background-color: $primary-700;
+  border-color: $primary-700;
+  transition: 250ms;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary-800;
+    border-color: $primary-800;
+  }
+
+  &:focus {
+    background-color: $primary-600;
+    border-color: $primary-600;
+  }
+
+  &:disabled {
+    background-color: $primary-200;
+    border-color: $primary-200;
+    cursor: not-allowed;
+  }
+}
