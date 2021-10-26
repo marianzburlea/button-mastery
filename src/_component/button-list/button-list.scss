@@ -5,6 +5,8 @@
   border-color: $primary-700;
   transition: 250ms;
   cursor: pointer;
+  outline-width: 0;
+  outline-style: solid;
 
   &:hover {
     background-color: $primary-800;
@@ -14,11 +16,75 @@
   &:focus {
     background-color: $primary-600;
     border-color: $primary-600;
+    outline-width: 4px;
+    outline-color: $primary-50;
+    outline-color: $primary-50;
   }
 
   &:disabled {
     background-color: $primary-200;
     border-color: $primary-200;
     cursor: not-allowed;
+  }
+
+  &[secondary] {
+    background-color: $primary-50;
+    border-color: $primary-50;
+    color: $primary-700;
+    transition: 250ms;
+    cursor: pointer;
+    outline-width: 0;
+    outline-style: solid;
+
+    &:hover {
+      background-color: $primary-100;
+      border-color: $primary-100;
+    }
+
+    &:focus {
+      background-color: $primary-50;
+      border-color: $primary-50;
+      outline-width: 4px;
+      outline-color: $primary-50;
+      outline-color: $primary-50;
+    }
+
+    &:disabled {
+      background-color: $primary-25;
+      border-color: $primary-25;
+      color: $primary-300;
+      cursor: not-allowed;
+    }
+  }
+
+  &[gray] {
+    background-color: transparent;
+    border-color: $gray-700;
+    color: $gray-700;
+    transition: 250ms;
+    cursor: pointer;
+    outline-width: 0;
+    outline-style: solid;
+
+    &:hover {
+      color: $gray-800;
+      background-color: $gray-100;
+      border-color: $gray-100;
+    }
+
+    &:focus {
+      background-color: $gray-50;
+      border-color: transparent;
+      outline-width: 4px;
+      outline-color: $gray-50;
+      outline-color: $gray-50;
+    }
+
+    &:disabled {
+      background-color: $gray-25;
+      border-color: $white;
+      color: $gray-300;
+      cursor: not-allowed;
+    }
   }
 }

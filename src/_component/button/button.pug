@@ -20,14 +20,14 @@
       class=`button__${size}`
     )
       span #{size} CTA
-      img(src=`${baseUrl}asset/image/circle.svg` width="20")
+      .bm-new-circle
 
   each size in buttonSize
     button.button.button__lead--left(
       class=`button__${size}`
     )
       span #{size} CTA
-      img(src=`${baseUrl}asset/image/circle.svg` width="20")
+      .bm-new-circle
 
 
   each size in buttonSize
@@ -35,7 +35,7 @@
       class=`button__${size}`
     )
       span #{size} CTA
-      img(src=`${baseUrl}asset/image/circle.svg` width="20")
+      .bm-new-circle
 
 
   each size in buttonSize
@@ -51,8 +51,5 @@
       icon="circle"
       class=`button__${size}`
     )
-      img(
-        src=`${baseUrl}asset/image/circle.svg`
-        width=`${iconSizeMap[size]}`
-      )
+      .bm-new-circle
 

@@ -9,6 +9,7 @@ h1 This is the mega uga buga button mastery
     large: 24
   }
 
+//- primary
 .button__wrapper
   each size in buttonSize
     button.button(
@@ -29,7 +30,7 @@ h1 This is the mega uga buga button mastery
       class=`button__${size}`
     )
       span #{size} CTA
-      img(src=`${baseUrl}asset/image/circle.svg` width="20")
+      .bm-new-circle
 
 
   each size in buttonSize
@@ -37,7 +38,7 @@ h1 This is the mega uga buga button mastery
       class=`button__${size}`
     )
       span #{size} CTA
-      img(src=`${baseUrl}asset/image/circle.svg` width="20")
+      .bm-new-circle
 
 
   each size in buttonSize
@@ -57,4 +58,114 @@ h1 This is the mega uga buga button mastery
         src=`${baseUrl}asset/image/circle.svg`
         width=`${iconSizeMap[size]}`
       )
+
+
+//- secondary
+.button__wrapper
+  each size in buttonSize
+    button.button(
+      secondary
+      class=`button__${size}`
+    ) #{size} Secondary
+
+  //- disabled
+  each size in buttonSize
+    button.button(
+      secondary
+      class=`button__${size}`
+      disabled
+    ) #{size} Secondary
+
+
+
+  each size in buttonSize
+    button.button.button__lead--left(
+      secondary
+      class=`button__${size}`
+    )
+      span #{size} Secondary
+      .bm-new-circle
+
+
+  each size in buttonSize
+    button.button.button__lead--right(
+      secondary
+      class=`button__${size}`
+    )
+      span #{size} Secondary
+      .bm-new-circle
+
+
+  each size in buttonSize
+    button.button.button__lead--left(
+      secondary
+      class=`button__${size}`
+    )
+      span tiny Secondary
+      .purple-disc
+
+
+  each size in buttonSize
+    button.button(
+      icon="circle"
+      secondary
+      class=`button__${size}`
+    )
+      .bm-new-circle
+
+
+
+//- gray
+.button__wrapper
+  each size in buttonSize
+    button.button(
+      gray
+      class=`button__${size}`
+    ) #{size} gray
+
+  //- disabled
+  each size in buttonSize
+    button.button(
+      gray
+      class=`button__${size}`
+      disabled
+    ) #{size} gray
+
+
+
+  each size in buttonSize
+    button.button.button__lead--left(
+      gray
+      class=`button__${size}`
+    )
+      span #{size} gray
+      .bm-new-circle
+
+
+  each size in buttonSize
+    button.button.button__lead--right(
+      gray
+      class=`button__${size}`
+    )
+      span #{size} gray
+      .bm-new-circle
+
+
+  each size in buttonSize
+    button.button.button__lead--left(
+      gray
+      class=`button__${size}`
+    )
+      span tiny gray
+      .gray-disc
+
+
+  each size in buttonSize
+    button.button(
+      icon="circle"
+      gray
+      class=`button__${size}`
+    )
+      .bm-new-circle
+
 
