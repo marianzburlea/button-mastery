@@ -55,10 +55,7 @@ h2 primary
       icon="circle"
       class=`button__${size}`
     )
-      img(
-        src=`${baseUrl}asset/image/circle.svg`
-        width=`${iconSizeMap[size]}`
-      )
+      .bm-new-circle
 
 
 //- secondary
@@ -117,56 +114,715 @@ h2 secondary
 
 
 
-//- gray
-h2 gray
+//- secondary gray
+h2 secondary gray
 .button__wrapper
   each size in buttonSize
     button.button(
-      gray
+      secondary-gray
       class=`button__${size}`
-    ) #{size} gray
+    ) #{size} secondary gray
 
   //- disabled
   each size in buttonSize
     button.button(
-      gray
+      secondary-gray
       class=`button__${size}`
       disabled
-    ) #{size} gray
+    ) #{size} secondary gray
 
 
 
   each size in buttonSize
     button.button.button__lead--left(
-      gray
+      secondary-gray
       class=`button__${size}`
     )
-      span #{size} gray
+      span #{size} secondary gray
       .bm-new-circle
 
 
   each size in buttonSize
     button.button.button__lead--right(
-      gray
+      secondary-gray
       class=`button__${size}`
     )
-      span #{size} gray
+      span #{size} secondary gray
       .bm-new-circle
 
 
   each size in buttonSize
     button.button.button__lead--left(
-      gray
+      secondary-gray
       class=`button__${size}`
     )
-      span tiny gray
+      //- span  v lui #{size} :) secondary gray
+      span= size
       .gray-disc
 
 
   each size in buttonSize
     button.button(
       icon="circle"
-      gray
+      secondary-gray
+      class=`button__${size}`
+    )
+      .bm-new-circle
+
+
+
+//- tertiary
+h2 tertiary
+.button__wrapper
+  each size in buttonSize
+    button.button(
+      tertiary
+      class=`button__${size}`
+    ) #{size} tertiary
+
+  //- disabled
+  each size in buttonSize
+    button.button(
+      tertiary
+      class=`button__${size}`
+      disabled
+    ) #{size} tertiary
+
+
+
+  each size in buttonSize
+    button.button.button__lead--left(
+      tertiary
+      class=`button__${size}`
+    )
+      span #{size} tertiary
+      .bm-new-circle
+
+
+  each size in buttonSize
+    button.button.button__lead--right(
+      tertiary
+      class=`button__${size}`
+    )
+      span #{size} tertiary
+      .bm-new-circle
+
+
+  each size in buttonSize
+    button.button.button__lead--left(
+      tertiary
+      class=`button__${size}`
+    )
+      span tiny tertiary
+      .purple-disc
+
+
+  each size in buttonSize
+    button.button(
+      icon="circle"
+      tertiary
+      class=`button__${size}`
+    )
+      .bm-new-circle
+
+
+
+//- tertiary gray
+h2 tertiary gray
+.button__wrapper
+  each size in buttonSize
+    button.button(
+      tertiary-gray
+      class=`button__${size}`
+    ) #{size} tertiary gray
+
+  //- disabled
+  each size in buttonSize
+    button.button(
+      tertiary-gray
+      class=`button__${size}`
+      disabled
+    ) #{size} tertiary gray
+
+
+
+  each size in buttonSize
+    button.button.button__lead--left(
+      tertiary-gray
+      class=`button__${size}`
+    )
+      span #{size} tertiary gray
+      .bm-new-circle
+
+
+  each size in buttonSize
+    button.button.button__lead--right(
+      tertiary-gray
+      class=`button__${size}`
+    )
+      span #{size} tertiary gray
+      .bm-new-circle
+
+
+  each size in buttonSize
+    button.button.button__lead--left(
+      tertiary-gray
+      class=`button__${size}`
+    )
+      //- span  v lui #{size} :) tertiary gray
+      span= size
+      .gray-disc
+
+
+  each size in buttonSize
+    button.button(
+      icon="circle"
+      tertiary-gray
+      class=`button__${size}`
+    )
+      .bm-new-circle
+
+
+
+
+
+//- link
+h2 link
+.button__wrapper
+  each size in buttonSize
+    button.button(
+      link
+      class=`button__${size}`
+    ) #{size} link
+
+  //- disabled
+  each size in buttonSize
+    button.button(
+      link
+      class=`button__${size}`
+      disabled
+    ) #{size} link
+
+
+
+  each size in buttonSize
+    button.button.button__lead--left(
+      link
+      class=`button__${size}`
+    )
+      span #{size} link
+      .bm-new-circle
+
+
+  each size in buttonSize
+    button.button.button__lead--right(
+      link
+      class=`button__${size}`
+    )
+      span #{size} link
+      .bm-new-circle
+
+
+  each size in buttonSize
+    button.button.button__lead--left(
+      link
+      class=`button__${size}`
+    )
+      span tiny link
+      .purple-disc
+
+
+  each size in buttonSize
+    button.button(
+      icon="circle"
+      link
+      class=`button__${size}`
+    )
+      .bm-new-circle
+
+
+
+//- link gray
+h2 link gray
+.button__wrapper
+  each size in buttonSize
+    button.button(
+      link-gray
+      class=`button__${size}`
+    ) #{size} link gray
+
+  //- disabled
+  each size in buttonSize
+    button.button(
+      link-gray
+      class=`button__${size}`
+      disabled
+    ) #{size} link gray
+
+
+
+  each size in buttonSize
+    button.button.button__lead--left(
+      link-gray
+      class=`button__${size}`
+    )
+      span #{size} link gray
+      .bm-new-circle
+
+
+  each size in buttonSize
+    button.button.button__lead--right(
+      link-gray
+      class=`button__${size}`
+    )
+      span #{size} link gray
+      .bm-new-circle
+
+
+  each size in buttonSize
+    button.button.button__lead--left(
+      link-gray
+      class=`button__${size}`
+    )
+      //- span  v lui #{size} :) link gray
+      span= size
+      .gray-disc
+
+
+  each size in buttonSize
+    button.button(
+      icon="circle"
+      link-gray
+      class=`button__${size}`
+    )
+      .bm-new-circle
+
+//- danger
+h2 !!!!!!!!!!!!!! danger !!!!!!!!!!!!!!!!!
+.button__wrapper
+  each size in buttonSize
+    button.button(
+      danger
+      class=`button__${size}`
+    ) #{size} CTA!
+
+  //- disabled
+  each size in buttonSize
+    button.button(
+      danger
+      class=`button__${size}`
+      disabled
+    ) #{size} Disabled
+
+
+
+  each size in buttonSize
+    button.button.button__lead--left(
+      danger
+      class=`button__${size}`
+    )
+      span #{size} CTA
+      .bm-new-circle
+
+
+  each size in buttonSize
+    button.button.button__lead--right(
+      danger
+      class=`button__${size}`
+    )
+      span #{size} CTA
+      .bm-new-circle
+
+
+  each size in buttonSize
+    button.button.button__lead--left(
+      danger
+      class=`button__${size}`
+    )
+      span tiny CTA
+      .white-disc
+
+
+  each size in buttonSize
+    button.button(
+      danger
+      icon="circle"
+      class=`button__${size}`
+    )
+      .bm-new-circle
+
+
+//- secondary
+h2 secondary
+.button__wrapper
+  each size in buttonSize
+    button.button(
+      danger
+      secondary
+      class=`button__${size}`
+    ) #{size} Secondary
+
+  //- disabled
+  each size in buttonSize
+    button.button(
+      danger
+      secondary
+      class=`button__${size}`
+      disabled
+    ) #{size} Secondary
+
+
+
+  each size in buttonSize
+    button.button.button__lead--left(
+      danger
+      secondary
+      class=`button__${size}`
+    )
+      span #{size} Secondary
+      .bm-new-circle
+
+
+  each size in buttonSize
+    button.button.button__lead--right(
+      danger
+      secondary
+      class=`button__${size}`
+    )
+      span #{size} Secondary
+      .bm-new-circle
+
+
+  each size in buttonSize
+    button.button.button__lead--left(
+      danger
+      secondary
+      class=`button__${size}`
+    )
+      span tiny Secondary
+      .danger-disc
+
+
+  each size in buttonSize
+    button.button(
+      danger
+      icon="circle"
+      secondary
+      class=`button__${size}`
+    )
+      .bm-new-circle
+
+
+
+//- secondary gray
+h2 secondary gray
+.button__wrapper
+  each size in buttonSize
+    button.button(
+      danger
+      secondary-gray
+      class=`button__${size}`
+    ) #{size} secondary gray
+
+  //- disabled
+  each size in buttonSize
+    button.button(
+      danger
+      secondary-gray
+      class=`button__${size}`
+      disabled
+    ) #{size} secondary gray
+
+
+
+  each size in buttonSize
+    button.button.button__lead--left(
+      danger
+      secondary-gray
+      class=`button__${size}`
+    )
+      span #{size} secondary gray
+      .bm-new-circle
+
+
+  each size in buttonSize
+    button.button.button__lead--right(
+      danger
+      secondary-gray
+      class=`button__${size}`
+    )
+      span #{size} secondary gray
+      .bm-new-circle
+
+
+  each size in buttonSize
+    button.button.button__lead--left(
+      danger
+      secondary-gray
+      class=`button__${size}`
+    )
+      //- span  v lui #{size} :) secondary gray
+      span= size
+      .gray-disc
+
+
+  each size in buttonSize
+    button.button(
+      danger
+      icon="circle"
+      secondary-gray
+      class=`button__${size}`
+    )
+      .bm-new-circle
+
+
+
+//- tertiary
+h2 tertiary !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+.button__wrapper
+  each size in buttonSize
+    button.button(
+      danger
+      tertiary
+      class=`button__${size}`
+    ) #{size} tertiary
+
+  //- disabled
+  each size in buttonSize
+    button.button(
+      danger
+      tertiary
+      class=`button__${size}`
+      disabled
+    ) #{size} tertiary
+
+
+
+  each size in buttonSize
+    button.button.button__lead--left(
+      danger
+      tertiary
+      class=`button__${size}`
+    )
+      span #{size} tertiary
+      .bm-new-circle
+
+
+  each size in buttonSize
+    button.button.button__lead--right(
+      danger
+      tertiary
+      class=`button__${size}`
+    )
+      span #{size} tertiary
+      .bm-new-circle
+
+
+  each size in buttonSize
+    button.button.button__lead--left(
+      danger
+      tertiary
+      class=`button__${size}`
+    )
+      span tiny tertiary !!!!!!!!!!!
+      .danger-disc
+
+
+  each size in buttonSize
+    button.button(
+      danger
+      icon="circle"
+      tertiary
+      class=`button__${size}`
+    )
+      .bm-new-circle
+
+
+
+//- tertiary gray
+h2 tertiary gray
+.button__wrapper
+  each size in buttonSize
+    button.button(
+      danger
+      tertiary-gray
+      class=`button__${size}`
+    ) #{size} tertiary gray
+
+  //- disabled
+  each size in buttonSize
+    button.button(
+      danger
+      tertiary-gray
+      class=`button__${size}`
+      disabled
+    ) #{size} tertiary gray
+
+
+
+  each size in buttonSize
+    button.button.button__lead--left(
+      danger
+      tertiary-gray
+      class=`button__${size}`
+    )
+      span #{size} tertiary gray
+      .bm-new-circle
+
+
+  each size in buttonSize
+    button.button.button__lead--right(
+      danger
+      tertiary-gray
+      class=`button__${size}`
+    )
+      span #{size} tertiary gray
+      .bm-new-circle
+
+
+  each size in buttonSize
+    button.button.button__lead--left(
+      danger
+      tertiary-gray
+      class=`button__${size}`
+    )
+      //- span  v lui #{size} :) tertiary gray
+      span= size
+      .danger-disc
+
+
+  each size in buttonSize
+    button.button(
+      danger
+      icon="circle"
+      tertiary-gray
+      class=`button__${size}`
+    )
+      .bm-new-circle
+
+
+
+
+
+//- link
+h2 link
+.button__wrapper
+  each size in buttonSize
+    button.button(
+      danger
+      link
+      class=`button__${size}`
+    ) #{size} link
+
+  //- disabled
+  each size in buttonSize
+    button.button(
+      danger
+      link
+      class=`button__${size}`
+      disabled
+    ) #{size} link
+
+
+
+  each size in buttonSize
+    button.button.button__lead--left(
+      danger
+      link
+      class=`button__${size}`
+    )
+      span #{size} link
+      .bm-new-circle
+
+
+  each size in buttonSize
+    button.button.button__lead--right(
+      danger
+      link
+      class=`button__${size}`
+    )
+      span #{size} link
+      .bm-new-circle
+
+
+  each size in buttonSize
+    button.button.button__lead--left(
+      danger
+      link
+      class=`button__${size}`
+    )
+      span tiny link
+      .danger-disc
+
+
+  each size in buttonSize
+    button.button(
+      danger
+      icon="circle"
+      link
+      class=`button__${size}`
+    )
+      .bm-new-circle
+
+
+
+//- link gray
+h2 link gray
+.button__wrapper
+  each size in buttonSize
+    button.button(
+      danger
+      link-gray
+      class=`button__${size}`
+    ) #{size} link gray
+
+  //- disabled
+  each size in buttonSize
+    button.button(
+      danger
+      link-gray
+      class=`button__${size}`
+      disabled
+    ) #{size} link gray
+
+
+
+  each size in buttonSize
+    button.button.button__lead--left(
+      danger
+      link-gray
+      class=`button__${size}`
+    )
+      span #{size} link gray
+      .bm-new-circle
+
+
+  each size in buttonSize
+    button.button.button__lead--right(
+      danger
+      link-gray
+      class=`button__${size}`
+    )
+      span #{size} link gray
+      .bm-new-circle
+
+
+  each size in buttonSize
+    button.button.button__lead--left(
+      danger
+      link-gray
+      class=`button__${size}`
+    )
+      //- span  v lui #{size} :) link gray
+      span= size
+      .danger-disc
+
+
+  each size in buttonSize
+    button.button(
+      danger
+      icon="circle"
+      link-gray
       class=`button__${size}`
     )
       .bm-new-circle

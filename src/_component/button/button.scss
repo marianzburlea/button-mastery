@@ -89,6 +89,12 @@
   }
 }
 
+.danger-disc {
+  &::after {
+    background-color: $danger-600;
+  }
+}
+
 .gray-disc {
   &::after {
     background-color: $gray-700;
